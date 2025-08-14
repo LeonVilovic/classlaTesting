@@ -9,7 +9,7 @@ import classla
 # Load Serbian pipeline
 nlp = classla.Pipeline("sr")
 
-text = (" Kada je Sebastian Thrun počeo da radi na automobilima bez vozača "
+text = ("      Sebastian Thrun je zvezda ove priče. Kada  je Sebastian Thrun počeo da radi na automobilima bez vozača "
         "u Google-u 2007. godine, malo ljudi van kompanije ga je shvatalo "
         "ozbiljno. „Mogu da vam kažem da su vrlo visoki direktori velikih "
         "američkih automobilskih kompanija stiskali moju ruku i okretali se "
@@ -33,4 +33,4 @@ print("Verbs:", verbs)
 
 # Named entities
 for ent in doc.ents:
-    print(ent.text, ent.type)
+    print(ent.text, ent.type, ent.start_char, ent.end_char)
