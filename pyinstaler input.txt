@@ -1,0 +1,1 @@
+pyinstaller --onefile --hidden-import=classla --hidden-import=stanza --collect-all=obeliks --add-data="C:\Users\leon.vilovic\classla_resources;classla_resources" main.py
