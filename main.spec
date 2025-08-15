@@ -3,7 +3,9 @@ from PyInstaller.utils.hooks import collect_all
 
 datas = [('C:\\Users\\leon.vilovic\\classla_resources', 'classla_resources')]
 binaries = []
-hiddenimports = ['classla', 'stanza']
+hiddenimports = []
+tmp_ret = collect_all('*')
+datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
 tmp_ret = collect_all('obeliks')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
 
